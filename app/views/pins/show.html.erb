@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= image_tag (@pin.photo) %>
-</p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @pin.description %>
+	<strong>Photo:</strong>
+	<div class="col-md-3">
+		<div class="thumbnail">
+			<p>
+				<strong>Nombre:</strong>
+				<%= @pin.name %>
+			</p>
+			<%= image_tag (@pin.photo), class:"img-responsive" %>
+			<p>
+				<strong>Descripción:</strong>
+				<%= @pin.description %>
+			</p>
+		</div>
+		<%= link_to 'Edit', edit_pin_path(@pin), class:"btn btn-default" %>
+		<%= link_to 'Back', pins_path, class:"btn btn-default" %>
+	</div>
 </p>
 
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<%= link_to 'Back', pins_path %>
+
