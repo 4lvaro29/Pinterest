@@ -6,6 +6,11 @@ class PinsController < ApplicationController
     @pins = current_user.pins
   end
 
+  def pinsof
+    @user_id = params[:user_id]
+    @user = User.find(@user_id)
+    @pins = @user.pins 
+  end
   # GET /pins
   # GET /pins.json
   def index

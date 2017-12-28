@@ -2,22 +2,25 @@
 
 
 <p>
-	<strong>Photo:</strong>
-	<div class="col-md-3">
-		<div class="thumbnail">
-			<p>
-				<strong>Nombre:</strong>
-				<%= @pin.name %>
-			</p>
-			<%= image_tag (@pin.photo), class:"img-responsive" %>
-			<p>
-				<strong>Descripción:</strong>
-				<%= @pin.description %>
-			</p>
+	<div class="container">
+		<div class="row">
+		<div class="col-md-12">
+				<div class="thumbnail">
+					<h2>Photo</h2>
+					<p>
+						<strong>Nombre:</strong>
+						<%= @pin.name %>
+					</p>
+					<%= image_tag (@pin.photo), class:"img-responsive" %>
+					<p>
+						<strong>Descripción:</strong>
+						<%= @pin.description %>
+					</p>
+				</div>
+				<%= link_to 'Edit', edit_pin_path(@pin), class:"btn btn-default" %>
+				<%= link_to 'Back', pins_path, class:"btn btn-default" %>
+				<%= link_to 'Más Pines del usuario', pinsof_path(@pin.user.id) %>
+			</div>
 		</div>
-		<%= link_to 'Edit', edit_pin_path(@pin), class:"btn btn-default" %>
-		<%= link_to 'Back', pins_path, class:"btn btn-default" %>
 	</div>
-</p>
-
 
