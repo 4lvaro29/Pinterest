@@ -1,3 +1,4 @@
+<div class="container">
 <div class="grid">
   <p id="notice"><%= notice %></p>
 
@@ -25,10 +26,7 @@
   
 
 </div>
-  <% if user_signed_in? %>
-  <%= link_to 'New Pin', new_pin_path, class:"btn btn-primary btn-sm" %>
-  <% end %>
-
+</div>
   <script>
   $('.grid').masonry({
   // options
@@ -36,7 +34,7 @@
   columnWidth: 200
   });
   
-    $(window).load(function(){
+    $(window).on('load', function(){
     $('.grid').masonry({
   // options
   itemSelector: '.grid-item',
