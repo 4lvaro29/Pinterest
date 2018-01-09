@@ -10,10 +10,10 @@
       <%= image_tag (pin.photo), class:"img-responsive" %>
       <%= pin.description %>
       <div class="buttons">
-        <%= link_to 'Show', pin, class:"btn btn-default" %>
-        <%= link_to 'Edit', edit_pin_path(pin), class:"btn btn-default" %>
+        <%= link_to 'Show', pin, class:"btn btn-primary btn-sm" %>
+        <%= link_to 'Edit', edit_pin_path(pin), class:"btn btn-primary btn-sm" %>
         <% if user_signed_in? %>
-        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default" %>
+        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary btn-sm" %>
         <% end %>
       </div>
     </div>
@@ -26,7 +26,7 @@
 
 </div>
   <% if user_signed_in? %>
-  <%= link_to 'New Pin', new_pin_path, class:"btn btn-default" %>
+  <%= link_to 'New Pin', new_pin_path, class:"btn btn-primary btn-sm" %>
   <% end %>
 
   <script>

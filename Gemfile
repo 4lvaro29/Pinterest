@@ -10,6 +10,9 @@ end
 gem 'rails', '~> 5.0.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
+#Pry-rails
+gem 'pry-rails', :group => :development
+
 #Use devise for users
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
