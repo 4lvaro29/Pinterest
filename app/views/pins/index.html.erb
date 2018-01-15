@@ -3,7 +3,7 @@
   <p id="notice"><%= notice %></p>
 
   <% @pins.each do |pin| %>
-  <div class="grid-item" style="width:200px">
+  <div class="grid-item" style="width:200px"> <!--cambiar estilo en linea -->
     <div class="thumbnail">
       <%= pin.name %>
       <%= image_tag (pin.photo), class:"img-responsive" %>

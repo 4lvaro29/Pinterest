@@ -1,4 +1,23 @@
+<div class="bold-line"></div>
+<div class="container">
+  <div class="window">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="welcome">Bienvenidos!</div>
+      <div class="subtitle">Antes de usar nuestros servicios, debes registrarte.</div>
+      <form action="<%= user_session_path %>" method="POST">
+        <div class="input-fields">
+          <input type="hidden" value="<%= form_authenticity_token %>" name ="authenticity_token">
+          <input id="user_email" name="user[email]" type='email' placeholder='Email' class='input-line full-width'></input>
+          <input type='password' name="user[password]" placeholder='Password' class='input-line full-width'></input>
 
+        </div>
+        <div class='spacing'>or continue with <span class='highlight'>Facebook</span>
+        </div>
+        <div><button  class='actions ghost-round full-width'>Create Account</button>
+        </div>
+      </form>
+<!--
 <div class="container fluid">
   <div class="well">
     <div class="row">
@@ -32,43 +51,6 @@
     </div>
   </div>
 </div>
-
-<!--
-<div class="container">
-  <div class="well signin">
-    <form class="form-horizontal">
-      <fieldset>
-        <legend>Login</legend>
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-group">
-          <%= f.label :email, class:"col-lg-2 control-label" %>
-          <div class="col-lg-10">  
-            <%= f.email_field :email, autofocus: true, class:"form-control" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <%= f.label :password, class:"col-lg-2 control-label" %>
-          <div class="col-lg-10">
-            <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
-          </div>
-        </div>
-        <% if devise_mapping.rememberable? -%>
-        <div class="form-group">
-          <div class="col-lg-10 col-lg-offset-2">
-            <%= f.label :remember_me %>
-            <%= f.check_box :remember_me %>
-          </div>
-        </div>
-        <% end -%>
-        <div class="col-lg-10 col-lg-offset-2">
-          <div class="actions">
-            <%= f.submit "Log in", class:"btn btn-primary" %>
-            <%= render "devise/shared/links"%>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-      <% end %>
-    </div>
-  </div>
 -->
+
+

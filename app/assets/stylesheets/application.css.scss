@@ -1,27 +1,4 @@
+@import "login";
 @import "pages";
 @import "pins";
-
-.signtext {
-
-	text-align: center;
-	color: white;
-}
-
-
-.well {
-background: linear-gradient(to bottom, #6600cc 0%, #ff5050 100%);
-border-radius: 10px;
-width: 100%;
-
-}
-
-.txt { //label title sign in
-
-	color: white;
-}
-
-.btn { //All buttons
-
-	background-color: purple;
-	border: purple;
-}
+@import "navbar";
