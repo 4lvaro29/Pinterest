@@ -1,0 +1,19 @@
+<div class="bold-line"></div>
+<div class="container">
+  <div class="window">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="welcome">Bienvenidos!</div>
+      <div class="subtitle">Antes de usar nuestros servicios, debes registrarte.</div>
+      <form action="<%= user_session_path %>" method="POST">
+        <div class="input-fields">
+          <input type="hidden" value="<%= form_authenticity_token %>" name ="authenticity_token">
+          <input id="user_email" name="user[email]" type='email' placeholder='Email' class='input-line full-width'></input>
+          <input type='password' name="user[password]" placeholder='Password' class='input-line full-width'></input>
+
+        </div>
+        <div class='spacing'>o ingresa vía <span class='highlight'>Facebook</span>
+        </div>
+        <div><button  class='actions ghost-round full-width'>Create Account</button>
+        </div>
+      </form>
